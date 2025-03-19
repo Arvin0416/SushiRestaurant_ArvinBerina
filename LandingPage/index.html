@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/bebas-kai" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-action: #DD2B2B;
+            --font-bebas: 'Bebas Kai', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body style="font-family: 'Outfit', sans-serif;" class="text-white">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-transparent mx-[80px]">
+        <div class="container mx-auto flex justify-between items-center h-24 border-b-2 border-white/20 ">
+            <div class="flex items-center space-x-8 left-0">
+                <a href="javascript:void(0)" onclick="scrollToSection('about')" class="text-white font-light">ABOUT</a>
+                <a href="javascript:void(0)" onclick="scrollToSection('menu')" class="text-white font-light">MENU</a>
+                <a href="#" class="text-white font-light">CONTACT</a>
+            </div>
+            <a href="javascript:void(0)" onclick="scrollToSection('about')"><img src="./assets/logo_sushi.svg"
+                    alt="Sushi Japanese Resrtaurant Logo" class="w-48 h-12"></a>
+
+            <div class="flex items-center space-x-4">
+
+                <p class="text-white font-light">+23 344 434</p>
+                <div>
+                    <a href="#" class="bg-[#FFFFFF1A] px-4 py-2  text-white font-normal">BOOK A TABLE</a>
+                </div>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- About Section -->
+    <div class="relative h-screen w-full" id="about">
+        <!-- Logo Background -->
+        <div class="absolute inset-0 flex justify-center  gradient z-1">
+            <img src="./assets/Union.svg" alt="Sushi Japanese Restaurant Logo"
+                class="p-30  mt-2 mb-24 mix-blend-color-burn object-cover">
+        </div>
+
+        <!-- Content Section -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-2 ">
+            <div class="leading-[0.9] mt-50">
+                <h1 class="text-[40px] font-light text-action uppercase">Authentic Sushi </h1>
+                <p class="text-[200px] font-[400] font-bebas text-white">
+                    Omakase</p>
+            </div>
+            <div class="p-8 px-40">
+                <p class="font-normal text-[17px] leading-[120%] text-white  text-center uppercase drop-shadow-lg">
+                    Experience the finest sushi crafted by our expert chefs, with every piece tailored to your taste.
+                </p>
+            </div>
+
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="bg-action px-4 py-3 font-light text-[16px]">BOOK A TABLE</a>
+                <a href="#" class="bg-transparent px-4 py-3  font-light text-[16px]">VIEW MENU</a>
+            </div>
+            <div class="flex justify-center space-x-8 mt-12 filter invert brightness-0 saturate-10 contrast-80">
+                <img src="./assets/sponsors_logo/image7.svg" alt="image6" class="h-12 w-12 m-6" />
+                <img src="./assets/sponsors_logo/image8.svg" alt="image6" class="h-16 w-16 m-6" />
+                <img src="./assets/sponsors_logo/image6.svg" alt="image6" class="h-16 w-16 m-6" />
+            </div>
+
+
+        </div>
+
+        <div class="absolute bottom-[50px] left-[30px] flex flex-col space-y-4 pl-4 z-2">
+            <div class="ml-[25px] h-[219px] w-[3px] bg-white/10"></div>
+            <a href="#" class="bg-white/10 p-4 hover:bg-action ">
+                <img src="./assets/socials/Facebook.svg" alt="Facebook" class="w-6 h-6">
+            </a>
+            <a href="#" class="bg-white/10 p-4 hover:bg-action ">
+                <img src="./assets/socials/instagram.svg" alt="Instagram" class="w-6 h-6">
+            </a>
+            <a href="#" class="bg-white/10 p-4 hover:bg-action ">
+                <img src="./assets/socials/twitter.svg" alt="Twitter" class="w-6 h-6">
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Menu section -->
+
+    <div class=" w-full bg-black p-20" id="menu">
+        <div class=" flex justify-center">
+            <div class="w-[50%] border-t-2 mt-12 py-10 border-white/10 left-0 absolute"></div>
+            <div class="text-center mt-24">
+                <p class="text-action text-md uppercase">OUR MENU</p>
+                <p class="text-white  text-5xl font-bebas">EXPLORE <span class="text-white/50"> OUR MENU</span></p>
+            </div>
+            <div class="w-[50%] border-t-2 mt-54 py-10 border-white/10 right-0 absolute"></div>
+        </div>
+        <div>
+
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mt-20 h-[500px] ">
+            <div class="bg-cover bg-center shadow-md  transition-all duration-500 p-4 "
+                style="background-image: url('https://www.sushiya.de/wp-content/uploads/Sushiya53-Sake-Tasting.jpg'); height: 100%; backdrop-filter: blur(5px); background-color: rgba(0,0,0,0.5);">
+                <div class="card_gradient top-0 left-0  absolute w-full h-full"> </div>
+                <div class="border-t-2 border-l-2 border-r-2 border-white/20 h-full flex items-end p-4 z-50"> </div>
+                <div class="w-full h-full left-0 top-0 relative">
+                    <p class=" text-white text-2xl mt-[-40px] ml-2">Beverage</p>
+                </div>
+            </div>
+            <div class="bg-cover bg-center shadow-md  transition-all duration-500 p-4 "
+                style="background-image: url('https://static.wixstatic.com/media/3a8d48_fcfb83e208974b39b5b9e486964b02a0~mv2.jpg/v1/fill/w_568,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/3a8d48_fcfb83e208974b39b5b9e486964b02a0~mv2.jpg'); height: 100%; backdrop-filter: blur(5px); background-color: rgba(0,0,0,0.5);">
+                <div class="card_gradient top-0 left-0  absolute w-full h-full"> </div>
+                <div class="border-t-2 border-l-2 border-r-2 border-white/20 h-full flex items-end p-4 z-50"> </div>
+                <div class="w-full h-full left-0 top-0 relative">
+                    <p class=" text-white text-2xl mt-[-40px] ml-2">Food</p>
+                </div>
+            </div>
+            <div class="bg-cover bg-center shadow-md  transition-all duration-500 p-4 "
+                style="background-image: url('https://noshandnibble.blog/content/images/2017/08/toku-japanese-restaurant-kyoto-gion-box-2.jpg'); height: 100%; backdrop-filter: blur(5px); background-color: rgba(0,0,0,0.5);">
+                <div class="card_gradient top-0 left-0  absolute w-full h-full"> </div>
+                <div class="border-t-2 border-l-2 border-r-2 border-white/20 h-full flex items-end p-4 z-50"> </div>
+                <div class="w-full h-full left-0 top-0 relative">
+                    <p class=" text-white text-2xl mt-[-40px] ml-2">Desserts</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2nd Menu Section -->
+
+    <div class=" w-full bg-black p-20" id="menu2">
+        <div class="bg-white/10 p-20">
+            <div class=" flex justify-center">
+                <div class="w-[50%] border-t-2 mt-12 py-10 border-white/10 left-20 absolute"></div>
+                <div class="text-center mt-24">
+                    <p class="text-action text-md uppercase">OUR MENU</p>
+                    <p class="text-white  text-5xl font-bebas">EXPLORE <span class="text-white/50"> OUR MENU</span></p>
+                </div>
+                <div class="w-[50%] border-t-2 mt-54 py-10 border-white/10 right-20 absolute"></div>
+            </div>
+            <div id="menu-grid" class="grid grid-cols-4 gap-4 p-4 mt-24">
+            </div>
+            <div class="text-center  mt-12">
+                <a href="#" class=" uppercase text-md text-white">VIEW FULL MENU</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- about the omakase -->
+
+    <div class="w-full bg-black " id="omakase">
+        <div class="w-[50%] border-t-2 mt-36 py-10 border-white/10 left-0 absolute"></div>
+        <div class="w-[50%] border-l-2 mt-24  border-white/10 left-20 h-full absolute"></div>
+        <div class="bg-white/10 flex justify-center h-full items-center ">
+
+            <div class="w-1/2  ">
+                <div class="pl-20 py-20 "> <img src="./assets/omasake.svg" alt="Omakase Image" class="mt-16"></div>
+
+            </div>
+            <div class="w-1/2 p-10 text-white border-b-2 border-white/10">
+                <div class="pr-20 py-20">
+                    <p class="text-action text-2xl mb-4 uppercase">about the omakase</p>
+                    <h2 class="text-8xl font-bebas mb-4">CREATING A <span class="text-white/50">NEW WORLD OF
+                            FLAVORS</span>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Welcome to Omakase, where the delicate artistry of sushi meets the vibrant flavors of Japan. At
+                        Omakase, we are passionate about delivering an authentic and unforgettable dining experience,
+                        bringing the essence of traditional Japanese cuisine to every plate.
+                    </p>
+                    <br>
+                    <p class="text-lg leading-relaxed">Our master chefs meticulously craft each piece of sushi using the
+                        freshest, highest-quality
+                        ingredients sourced locally and globally. From the rich, buttery taste of our sashimi to the
+                        perfectly balanced rolls, every bite at Omakase is a testament to our commitment to excellence
+                        and
+                        authenticity.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+<script src=" ./script.js">
+</script>
+
+</html>

@@ -1,0 +1,14 @@
+@layer {
+    @theme {
+        --color-action: #DD2B2B;
+        --font-bebas: 'Bebas Kai', sans-serif;
+    }
+
+    .gradient {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(57, 57, 57, 1) 9%, rgba(83, 83, 83, 1) 13%, rgba(103, 103, 103, 1) 16%, rgba(116, 116, 116, 1) 17%, rgba(122, 122, 122, 0.826) 19%, rgba(105, 105, 105, 0.807) 23%, rgba(71, 71, 71, 1) 100%);
+    }
+
+    .card_gradient {
+        background: linear-gradient(0deg, rgba(5, 5, 5, 1) 0%, rgba(3, 3, 3, 0.669) 34%, rgba(0, 0, 0, 0) 100%);
+    }
+}
