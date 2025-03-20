@@ -19,62 +19,62 @@ document.addEventListener('click', function (event) {
 
 const menuData = [
     {
-        imageUrl: "https://example.com/image1.jpg",
-        title: "Nigiri (握り寿司)",
-        description: "Rolled sushi wrapped in seaweed (nori) and sliced into bite-sized pieces. Variations include hosomaki (thin rolls) and futomaki (thick rolls)."
+        imageUrl: "https://cdn.media.amplience.net/i/japancentre/recipes-1541-uramaki-inside-out-sushi-roll/Uramaki-inside-out-sushi-roll?$poi$&w=1200&h=630&sm=c&fmt=auto",
+        title: "Uramaki (裏巻き寿司))",
+        description: "Rolled sushi wrapped in seaweed (nori) and sliced into bite-sized pieces."
     },
     {
-        imageUrl: "https://example.com/image2.jpg",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWKVB-B9ovje1xFo66NfngIFPUiZ3olKE8Gg&s",
         title: "Gunkan (軍艦巻き)",
         description: "A bowl of vinegared rice topped with various sashimi and ingredients."
     },
     {
-        imageUrl: "https://example.com/image2.jpg",
+        imageUrl: "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/f560efb8-676a-4d39-8be9-3072bb4674c3/Derivates/8f1e68c2-1680-4c2a-9e89-b3b05596b14d.jpg",
         title: "Temaki (手巻き寿司)",
         description: "Inside-out rolls with rice on the outside and seaweed inside."
     },
     {
-        imageUrl: "https://example.com/image2.jpg",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDXIxm_UC8zJPhaXwtk9zP1qv8WDedlp2bAA&s",
         title: "Narezushi (馴れ寿司)",
         description: "Hand-rolled sushi in a cone shape with seaweed, rice, and fillings."
     },
     {
-        imageUrl: "https://example.com/image2.jpg",
+        imageUrl: "https://chefjacooks.com/wp-content/uploads/2023/04/inari-sushi-obento-square.jpg",
         title: "Inari Sushi (稲荷寿司)",
         description: "Thinly sliced raw fish or seafood, served without rice."
     },
     {
-        imageUrl: "https://example.com/image2.jpg",
+        imageUrl: "https://images.squarespace-cdn.com/content/v1/5ba57ae30490793897eab960/1546884117802-QYGEMXOSQ82GDCS26W69/Aburi+Salmon+Oshi.jpg",
         title: "Aburi Sushi (炙り寿司)",
         description: "A bowl of vinegared rice topped with various sashimi and ingredients."
     },
     {
-        imageUrl: "https://example.com/image2.jpg",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMFct0I32_VKiESC9EdtMtfdM_VRO7-mF5-A&s",
         title: "Oshi Sushi (押し寿司)",
         description: "Small, ball-shaped sushi often decorated with colorful toppings."
     },
     {
-        imageUrl: "https://example.com/image2.jpg",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2HEG0WjXYcSPaL7qyasKnVUk1_iDOnZXm0w&s",
         title: "Sashimi (刺身)vid",
         description: "Fermented sushi, an ancient method of preserving fish with rice."
     },
     {
-        imageUrl: "https://example.com/image2.jpg",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7QoDlvvRPYg_SAyVz3U_6OKtUP12Myy7bIg&s",
         title: "Nigiri (握り寿司)",
         description: "Small, ball-shaped sushi often decorated with colorful toppings."
     },
     {
-        imageUrl: "https://example.com/image2.jpg",
+        imageUrl: "https://www.mylilikoikitchen.com/wp-content/uploads/2024/02/Maki1-1-500x375.jpeg",
         title: "Maki (巻き寿司)",
         description: "Hand-pressed sushi with fish or seafood atop rice."
     },
     {
-        imageUrl: "https://example.com/image2.jpg",
+        imageUrl: "https://www.mylilikoikitchen.com/wp-content/uploads/2024/02/Maki1-1-500x375.jpeg",
         title: "Temari (手まり寿司)",
         description: "Inside-out rolls with rice on the outside and seaweed inside."
     },
     {
-        imageUrl: "https://example.com/image2.jpg",
+        imageUrl: "https://www.justonecookbook.com/wp-content/uploads/2020/02/Chirashi-Sushi-7722-I-1.jpg",
         title: "Chirashi (ちらし寿司)",
         description: "Lightly seared sushi with the top layer of fish torched."
     },
@@ -85,14 +85,14 @@ const menuData = [
 function renderMenuGrid(data) {
     const grid = document.getElementById('menu-grid');
     grid.innerHTML = data.map(menu => `
-        <div class="flex flex-col items-center p-4">
-            <div class="bg-black w-full p-2 md:p-4">
-                <div class="p-4 bg-white/20 rounded-2xl">
-                    <img src="${menu.imageUrl}" alt="${menu.title}" class="w-full h-32 sm:h-40 md:h-48 lg:h-56 object-cover rounded-md mb-2">
+        <div class="flex flex-col items-center p-1 ">
+            <div class="bg-black w-full p-8">
+                <div class=" bg-white/20 rounded-4xl">
+                    <img src="${menu.imageUrl}" alt="${menu.title}" class="w-full h-32 object-cover rounded-4xl mb-2">
                 </div>
             </div>
-            <div class="text-left mt-4">
-                <h3 class="text-lg md:text-xl lg:text-2xl font-normal">${menu.title}</h3>
+            <div class="text-left mt-2 mb-4">
+                <h3 class="text-lg md:text-xl lg:text-2xl mb-2 font-normal">${menu.title}</h3>
                 <p class="text-sm md:text-md font-light text-[#F5F5F5]">${menu.description}</p>
             </div>
         </div>
