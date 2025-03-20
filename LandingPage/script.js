@@ -85,21 +85,22 @@ const menuData = [
 function renderMenuGrid(data) {
     const grid = document.getElementById('menu-grid');
     grid.innerHTML = data.map(menu => `
-        <div class="flex flex-col items-center">
-            <div class="bg-black w-full p-4">
-                <div class="p-4 bg-white/20 rounded-[24px]">
-                    <img src="${menu.imageUrl}" alt="${menu.title}" class="w-full h-32 object-cover rounded-md mb-2">
+        <div class="flex flex-col items-center p-4">
+            <div class="bg-black w-full p-2 md:p-4">
+                <div class="p-4 bg-white/20 rounded-2xl">
+                    <img src="${menu.imageUrl}" alt="${menu.title}" class="w-full h-32 sm:h-40 md:h-48 lg:h-56 object-cover rounded-md mb-2">
                 </div>
             </div>
             <div class="text-left mt-4">
-                <h3 class="text-lg font-normal text-[22px]">${menu.title}</h3>
-                <p class="text-sm font-light text-wrap text-[#F5F5F5]">${menu.description}</p>
+                <h3 class="text-lg md:text-xl lg:text-2xl font-normal">${menu.title}</h3>
+                <p class="text-sm md:text-md font-light text-[#F5F5F5]">${menu.description}</p>
             </div>
         </div>
     `).join('');
 }
 
 renderMenuGrid(menuData);
+
 
 const beverageData = [
     {

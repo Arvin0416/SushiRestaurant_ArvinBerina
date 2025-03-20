@@ -71,25 +71,27 @@
         <!-- Logo Background -->
         <div class="absolute inset-0 flex justify-center  gradient z-1">
             <img src="./assets/Union.svg" alt="Sushi Japanese Restaurant Logo"
-                class="p-30  mt-2 mb-24 mix-blend-color-burn object-cover">
+                class="2xl:p-30 2xl:my-10 md:p-15 md:my-15 sm:my-45 p-10 my-50 mix-blend-color-burn object-cover">
         </div>
 
         <!-- Content Section -->
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-2 ">
             <div class="leading-[0.9] mt-50">
-                <h1 class="text-[40px] font-light text-action uppercase">Authentic Sushi </h1>
-                <p class="text-[200px] font-[400] font-bebas text-white">
+                <h1 class="2xl:text-[40px] md:text-[30px] text-[20px] font-light text-action uppercase">Authentic Sushi
+                </h1>
+                <p class="2xl:text-[200px] md:text-[150px] text-[100px] font-[400] font-bebas text-white">
                     Omakase</p>
             </div>
-            <div class="p-8 px-40">
-                <p class="font-normal text-[17px] leading-[120%] text-white  text-center uppercase drop-shadow-lg">
+            <div class="2xl:p-8 2xl:px-40 md:p-6 md:px-20 p-4 px-2">
+                <p
+                    class="font-normal 2xl:text-[17px] md:text-[15px] text-[12px] leading-[120%] text-white  text-center uppercase drop-shadow-lg">
                     Experience the finest sushi crafted by our expert chefs, with every piece tailored to your taste.
                 </p>
             </div>
 
-            <div class="flex justify-center space-x-6">
+            <div class="flex 2xl:justify-center  md:justify-center  justify-center space-x-6">
                 <a href="javascript:void(0)" onclick="scrollToSection('contacts')"
-                    class="bg-action px-4 py-3 font-light text-[16px] hover:bg-black/20">BOOK A TABLE</a>
+                    class="bg-action px-4 py-3 font-light text-[16px]  hover:bg-black/20">BOOK A TABLE</a>
                 <a href="javascript:void(0)" onclick="scrollToSection('listMenu')"
                     class="bg-transparent px-4 py-3  font-light text-[16px] hover:bg-black/20"">VIEW MENU</a>
             </div>
@@ -102,18 +104,34 @@
 
         </div>
 
-        <div class="absolute bottom-[50px] left-[30px] flex flex-col space-y-4 pl-4 z-2">
-            <div class="ml-[25px] h-[] w-[3px] bg-white/10"></div>
-            <a href="#" class="bg-white/10 p-4 hover:bg-action ">
-                <img src="./assets/socials/Facebook.svg" alt="Facebook" class="w-6 h-6">
+
+        <div class="hidden md:flex absolute bottom-[50px] left-[30px] flex-col space-y-4 pl-4 z-2">
+            <div class="ml-[25px] h-[20vh] w-[3px] bg-white/20"></div>
+            <a href="#" class="bg-white/10 p-4 hover:bg-action">
+                <img src="./assets/socials/Facebook.svg" alt="Facebook" class="w-5 h-5">
             </a>
-            <a href="#" class="bg-white/10 p-4 hover:bg-action ">
-                <img src="./assets/socials/instagram.svg" alt="Instagram" class="w-6 h-6">
+            <a href="#" class="bg-white/10 p-4 hover:bg-action">
+                <img src="./assets/socials/instagram.svg" alt="Instagram" class="w-5 h-5">
             </a>
-            <a href="#" class="bg-white/10 p-4 hover:bg-action ">
-                <img src="./assets/socials/twitter.svg" alt="Twitter" class="w-6 h-6">
+            <a href="#" class="bg-white/10 p-4 hover:bg-action">
+                <img src="./assets/socials/twitter.svg" alt="Twitter" class="w-5 h-5">
             </a>
         </div>
+
+        <div class="md:hidden absolute bottom-[20px] right-[30px] flex flex-row space-x-3 pl-2 z-2">
+            <div class=" h-[2px] w-[20vw] mt-5 bg-white/20"></div>
+            <a href="#" class="bg-white/10 p-3 hover:bg-action">
+                <img src="./assets/socials/Facebook.svg" alt="Facebook" class="w-4 h-4">
+            </a>
+            <a href="#" class="bg-white/10 p-3 hover:bg-action">
+                <img src="./assets/socials/instagram.svg" alt="Instagram" class="w-4 h-4">
+            </a>
+            <a href="#" class="bg-white/10 p-3 hover:bg-action">
+                <img src="./assets/socials/twitter.svg" alt="Twitter" class="w-4 h-4">
+            </a>
+
+        </div>
+
 
     </div>
 
@@ -122,9 +140,11 @@
     <div class=" w-full bg-black p-20" id="menu">
         <div class=" flex justify-center">
             <div class="w-[50%] border-t-2 mt-12 py-10 border-white/20 left-0 absolute"></div>
-            <div class="text-center mt-24">
+            <div class="text-center mt-16 md:mt-24">
                 <p class="text-action text-md uppercase">OUR MENU</p>
-                <p class="text-white  text-7xl font-bebas">EXPLORE <span class="text-white/60"> OUR MENU</span></p>
+                <p class="text-white text-4xl md:text-6xl lg:text-7xl font-bebas">EXPLORE
+                    <span class="text-white/60">OUR MENU</span>
+                </p>
             </div>
             <div class="w-[50%] border-t-2 mt-54 py-10 border-white/20 right-0 absolute"></div>
         </div>
@@ -132,7 +152,7 @@
 
         </div>
 
-        <div class="grid grid-cols-3 gap-4 mt-20 h-[500px] ">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-12 h-[500px]">
             <div href="javascript:void(0)" onclick="scrollToSection('beverageList')"
                 class="bg-cover bg-center shadow-md transition-all duration-500 p-4 block"
                 style="background-image: url('https://www.sushiya.de/wp-content/uploads/Sushiya53-Sake-Tasting.jpg'); height: 100%; backdrop-filter: blur(5px); background-color: rgba(0,0,0,0.5);">
@@ -164,62 +184,69 @@
     </div>
 
     <!-- 2nd Menu Section -->
-
-    <div class=" w-full bg-black p-20" id="menu2">
-        <div class="bg-white/10 p-20">
-            <div class=" flex justify-center">
-                <div class="w-[50%] border-t-2 mt-12 py-10 border-white/20 left-20 absolute"></div>
-                <div class="text-center mt-24">
-                    <p class="text-action text-md uppercase">OUR MENU</p>
-                    <p class="text-white  text-7xl font-bebas">EXPLORE <span class="text-white/60"> OUR MENU</span></p>
+    <div class="w-full bg-black p-5 md:p-10 lg:p-20" id="menu2">
+        <div class="bg-white/10 p-5 md:p-10 lg:p-20">
+            <div class="flex flex-col items-center">
+                <div class="w-full border-t-2 mt-6 md:mt-12 py-4 border-white/20"></div>
+                <div class="text-center mt-12">
+                    <p class="text-action text-sm md:text-md uppercase">OUR MENU</p>
+                    <p class="text-white text-3xl md:text-5xl lg:text-7xl font-bebas">EXPLORE <span
+                            class="text-white/60"> OUR MENU</span></p>
                 </div>
-                <div class="w-[50%] border-t-2 mt-54 py-10 border-white/20 right-20 absolute"></div>
+                <div class="w-full border-t-2 mt-6 md:mt-12 py-4 border-white/20"></div>
             </div>
-            <div id="menu-grid" class="grid grid-cols-4 gap-4 p-4 mt-24">
+
+            <div id="menu-grid"
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 mt-10 md:mt-24">
+                <!-- Menu Items will be inserted here dynamically -->
             </div>
-            <div class="text-center  mt-12">
-                <a href="#" class=" uppercase text-md text-white">VIEW FULL MENU</a>
+
+            <div class="text-center mt-12">
+                <a href="#" class="uppercase text-md text-white hover:underline">VIEW FULL MENU</a>
             </div>
         </div>
     </div>
 
-    <!-- about the omakase -->
+    <!-- About the Omakase Section -->
+    <div class="w-full bg-black" id="omakase">
+        <div class="hidden md:block w-[50%] border-t-2 mt-36 py-10 border-white/20 absolute left-0"></div>
+        <div class="hidden md:block w-[50%] border-l-2 mt-24 border-white/20 absolute left-20 h-full"></div>
 
-    <div class="w-full bg-black " id="omakase">
-        <div class="w-[50%] border-t-2 mt-36 py-10 border-white/20 left-0 absolute"></div>
-        <div class="w-[50%] border-l-2 mt-24  border-white/20 left-20 h-full absolute"></div>
-        <div class="bg-white/10 flex justify-center h-full items-center ">
+        <div class="bg-white/10 flex flex-col md:flex-row justify-center items-center h-full px-6 md:px-0">
+            <!-- Image Section -->
 
-            <div class="w-1/2  ">
-                <div class="pl-20 py-20 "> <img src="./assets/omasake.svg" alt="Omakase Image" class="mt-16"></div>
-
+            <div class="w-full md:w-1/2">
+                <div class=" md:pl-20 py-10 md:py-20">
+                    <img src="./assets/omasake.svg" alt="Omakase Image" class="mt-8 md:mt-16">
+                </div>
             </div>
-            <div class="w-1/2 p-10 text-white border-b-2 border-white/20 items-center">
-                <div class="pr-20 py-20">
-                    <p class="text-action text-2xl mb-4 mt-16 uppercase">about the omakase</p>
-                    <h2 class="text-8xl font-bebas mb-4">CREATING A <span class="text-white/60">NEW WORLD OF
-                            FLAVORS</span>
+
+            <!-- Text Section -->
+            <div class="w-full md:w-1/2 p-6 md:p-10 text-white border-b-2 border-white/20">
+                <div class="py-6 md:py-20">
+                    <p class="text-action text-lg md:text-2xl mb-4 uppercase">About the Omakase</p>
+                    <h2 class="text-4xl md:text-8xl font-bebas mb-4">
+                        CREATING A <span class="text-white/60">NEW WORLD OF FLAVORS</span>
                     </h2>
-                    <p class="text-lg leading-relaxed">
+                    <p class="text-base md:text-lg leading-relaxed">
                         Welcome to Omakase, where the delicate artistry of sushi meets the vibrant flavors of Japan. At
                         Omakase, we are passionate about delivering an authentic and unforgettable dining experience,
                         bringing the essence of traditional Japanese cuisine to every plate.
                     </p>
                     <br>
-                    <p class="text-lg leading-relaxed">Our master chefs meticulously craft each piece of sushi using the
-                        freshest, highest-quality
+                    <p class="text-base md:text-lg leading-relaxed">
+                        Our master chefs meticulously craft each piece of sushi using the freshest, highest-quality
                         ingredients sourced locally and globally. From the rich, buttery taste of our sashimi to the
                         perfectly balanced rolls, every bite at Omakase is a testament to our commitment to excellence
-                        and
-                        authenticity.</p>
+                        and authenticity.
+                    </p>
                 </div>
-
             </div>
-
         </div>
-        <div class="bg-white/10 h-40 "></div>
 
+        <div class="bg-white/10 h-20 md:h-40"></div>
     </div>
+
 
     <!-- List of Menu-->
 
