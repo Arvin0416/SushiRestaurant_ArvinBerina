@@ -21,27 +21,50 @@
 </head>
 
 <body style="font-family: 'Outfit', sans-serif;" class="text-white">
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-transparent mx-[80px]">
-        <div class="container mx-auto flex justify-between items-center h-24 border-b-2 border-white/20 ">
-            <div class="flex items-center space-x-8 left-0">
-                <a href="javascript:void(0)" onclick="scrollToSection('about')" class="text-white font-light">ABOUT</a>
-                <a href="javascript:void(0)" onclick="scrollToSection('menu')" class="text-white font-light">MENU</a>
-                <a href="#" class="text-white font-light">CONTACT</a>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-transparent px-6 md:px-12 lg:px-20 xl:px-[80px]">
+        <div
+            class="container mx-auto flex justify-between items-center h-20 md:h-24 border-b-2 border-white/20 relative">
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white text-2xl">
+                ☰
+            </button>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="dropdown-menu"
+                class="absolute top-full left-0 w-full bg-black/20 text-white flex flex-col items-center space-y-4 py-4 hidden transition-all duration-300">
+                <a href="javascript:void(0)" onclick="scrollToSection('about')" class="hover:text-gray-300">ABOUT</a>
+                <a href="javascript:void(0)" onclick="scrollToSection('menu')" class="hover:text-gray-300">MENU</a>
+                <a href="javascript:void(0)" onclick="scrollToSection('contacts')"
+                    class="hover:text-gray-300">CONTACT</a>
+                <button onclick="scrollToSection('contacts')" class="hover:text-gray-300">
+                    BOOK A TABLE
+                </button>
             </div>
-            <a href="javascript:void(0)" onclick="scrollToSection('about')"><img src="./assets/logo_sushi.svg"
-                    alt="Sushi Japanese Resrtaurant Logo" class="w-48 h-12"></a>
 
-            <div class="flex items-center space-x-4">
+            <!-- Desktop Menu (Hidden in Mobile) -->
+            <div class="hidden md:flex items-center space-x-4 md:space-x-6 lg:space-x-8 text-white font-light">
+                <a href="javascript:void(0)" onclick="scrollToSection('about')" class="hover:text-gray-300">ABOUT</a>
+                <a href="javascript:void(0)" onclick="scrollToSection('menu')" class="hover:text-gray-300">MENU</a>
+                <a href="javascript:void(0)" onclick="scrollToSection('contacts')"
+                    class="hover:text-gray-300">CONTACT</a>
+            </div>
 
+            <!-- Logo -->
+            <a href="javascript:void(0)" onclick="scrollToSection('about')">
+                <img src="./assets/logo_sushi.svg" alt="Sushi Logo" class="w-32 h-10 md:w-48 md:h-12">
+            </a>
+
+            <!-- Contact & Button (Hidden in Mobile, Shown in Desktop) -->
+            <div class="hidden md:flex items-center space-x-4">
                 <p class="text-white font-light">+23 344 434</p>
-                <div>
-                    <a href="#" class="bg-[#FFFFFF1A] px-4 py-2  text-white font-normal">BOOK A TABLE</a>
-                </div>
-
+                <button onclick="scrollToSection('contacts')"
+                    class="bg-[#FFFFFF1A] px-4 py-2 text-white font-normal hover:bg-action">
+                    BOOK A TABLE
+                </button>
             </div>
         </div>
-
     </nav>
+
 
     <!-- About Section -->
     <div class="relative h-screen w-full" id="about">
@@ -65,20 +88,22 @@
             </div>
 
             <div class="flex justify-center space-x-6">
-                <a href="#" class="bg-action px-4 py-3 font-light text-[16px]">BOOK A TABLE</a>
-                <a href="#" class="bg-transparent px-4 py-3  font-light text-[16px]">VIEW MENU</a>
+                <a href="javascript:void(0)" onclick="scrollToSection('contacts')"
+                    class="bg-action px-4 py-3 font-light text-[16px] hover:bg-black/20">BOOK A TABLE</a>
+                <a href="javascript:void(0)" onclick="scrollToSection('listMenu')"
+                    class="bg-transparent px-4 py-3  font-light text-[16px] hover:bg-black/20"">VIEW MENU</a>
             </div>
-            <div class="flex justify-center space-x-8 mt-12 filter invert brightness-0 saturate-10 contrast-80">
-                <img src="./assets/sponsors_logo/image7.svg" alt="image6" class="h-12 w-12 m-6" />
-                <img src="./assets/sponsors_logo/image8.svg" alt="image6" class="h-16 w-16 m-6" />
-                <img src="./assets/sponsors_logo/image6.svg" alt="image6" class="h-16 w-16 m-6" />
+            <div class=" flex justify-center space-x-8 mt-12 filter invert brightness-0 saturate-10 contrast-80">
+                    <img src="./assets/sponsors_logo/image7.svg" alt="image6" class="h-12 w-12 m-6" />
+                    <img src="./assets/sponsors_logo/image8.svg" alt="image6" class="h-16 w-16 m-6" />
+                    <img src="./assets/sponsors_logo/image6.svg" alt="image6" class="h-16 w-16 m-6" />
             </div>
 
 
         </div>
 
         <div class="absolute bottom-[50px] left-[30px] flex flex-col space-y-4 pl-4 z-2">
-            <div class="ml-[25px] h-[219px] w-[3px] bg-white/10"></div>
+            <div class="ml-[25px] h-[] w-[3px] bg-white/10"></div>
             <a href="#" class="bg-white/10 p-4 hover:bg-action ">
                 <img src="./assets/socials/Facebook.svg" alt="Facebook" class="w-6 h-6">
             </a>
@@ -99,7 +124,7 @@
             <div class="w-[50%] border-t-2 mt-12 py-10 border-white/20 left-0 absolute"></div>
             <div class="text-center mt-24">
                 <p class="text-action text-md uppercase">OUR MENU</p>
-                <p class="text-white  text-5xl font-bebas">EXPLORE <span class="text-white/50"> OUR MENU</span></p>
+                <p class="text-white  text-7xl font-bebas">EXPLORE <span class="text-white/60"> OUR MENU</span></p>
             </div>
             <div class="w-[50%] border-t-2 mt-54 py-10 border-white/20 right-0 absolute"></div>
         </div>
@@ -108,15 +133,17 @@
         </div>
 
         <div class="grid grid-cols-3 gap-4 mt-20 h-[500px] ">
-            <div class="bg-cover bg-center shadow-md  transition-all duration-500 p-4 "
+            <div href="javascript:void(0)" onclick="scrollToSection('beverageList')"
+                class="bg-cover bg-center shadow-md transition-all duration-500 p-4 block"
                 style="background-image: url('https://www.sushiya.de/wp-content/uploads/Sushiya53-Sake-Tasting.jpg'); height: 100%; backdrop-filter: blur(5px); background-color: rgba(0,0,0,0.5);">
-                <div class="card_gradient top-0 left-0  absolute w-full h-full"> </div>
-                <div class="border-t-2 border-l-2 border-r-2 border-white/20 h-full flex items-end p-4 z-50"> </div>
+                <div class="card_gradient top-0 left-0 absolute w-full h-full"></div>
+                <div class="border-t-2 border-l-2 border-r-2 border-white/20 h-full flex items-end p-4 z-50"></div>
                 <div class="w-full h-full left-0 top-0 relative">
-                    <p class=" text-white text-2xl mt-[-40px] ml-2">Beverage</p>
+                    <p class="text-white text-2xl mt-[-40px] ml-2">Beverage</p>
                 </div>
             </div>
-            <div class="bg-cover bg-center shadow-md  transition-all duration-500 p-4 "
+            <div href="javascript:void(0)" onclick="scrollToSection('foodList')"
+                class="bg-cover bg-center shadow-md  transition-all duration-500 p-4 "
                 style="background-image: url('https://static.wixstatic.com/media/3a8d48_fcfb83e208974b39b5b9e486964b02a0~mv2.jpg/v1/fill/w_568,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/3a8d48_fcfb83e208974b39b5b9e486964b02a0~mv2.jpg'); height: 100%; backdrop-filter: blur(5px); background-color: rgba(0,0,0,0.5);">
                 <div class="card_gradient top-0 left-0  absolute w-full h-full"> </div>
                 <div class="border-t-2 border-l-2 border-r-2 border-white/20 h-full flex items-end p-4 z-50"> </div>
@@ -124,7 +151,8 @@
                     <p class=" text-white text-2xl mt-[-40px] ml-2">Food</p>
                 </div>
             </div>
-            <div class="bg-cover bg-center shadow-md  transition-all duration-500 p-4 "
+            <div href="javascript:void(0)" onclick="scrollToSection('dessertList')"
+                class="bg-cover bg-center shadow-md  transition-all duration-500 p-4 "
                 style="background-image: url('https://noshandnibble.blog/content/images/2017/08/toku-japanese-restaurant-kyoto-gion-box-2.jpg'); height: 100%; backdrop-filter: blur(5px); background-color: rgba(0,0,0,0.5);">
                 <div class="card_gradient top-0 left-0  absolute w-full h-full"> </div>
                 <div class="border-t-2 border-l-2 border-r-2 border-white/20 h-full flex items-end p-4 z-50"> </div>
@@ -143,7 +171,7 @@
                 <div class="w-[50%] border-t-2 mt-12 py-10 border-white/20 left-20 absolute"></div>
                 <div class="text-center mt-24">
                     <p class="text-action text-md uppercase">OUR MENU</p>
-                    <p class="text-white  text-5xl font-bebas">EXPLORE <span class="text-white/50"> OUR MENU</span></p>
+                    <p class="text-white  text-7xl font-bebas">EXPLORE <span class="text-white/60"> OUR MENU</span></p>
                 </div>
                 <div class="w-[50%] border-t-2 mt-54 py-10 border-white/20 right-20 absolute"></div>
             </div>
@@ -169,7 +197,7 @@
             <div class="w-1/2 p-10 text-white border-b-2 border-white/20 items-center">
                 <div class="pr-20 py-20">
                     <p class="text-action text-2xl mb-4 mt-16 uppercase">about the omakase</p>
-                    <h2 class="text-8xl font-bebas mb-4">CREATING A <span class="text-white/50">NEW WORLD OF
+                    <h2 class="text-8xl font-bebas mb-4">CREATING A <span class="text-white/60">NEW WORLD OF
                             FLAVORS</span>
                     </h2>
                     <p class="text-lg leading-relaxed">
@@ -195,12 +223,12 @@
 
     <!-- List of Menu-->
 
-    <div class="w-full  bg-black py-26">
+    <div class="w-full  bg-black " id="listMenu">
         <div class=" flex justify-center mb-8">
             <div class="w-[50%] border-t-2 mt-12 py-10 border-white/20 left-0 absolute"></div>
             <div class="text-center mt-24">
                 <p class="text-action text-md uppercase">List of</p>
-                <p class="text-white  text-5xl font-bebas">OUR <span class="text-white/50"> MENU</span></p>
+                <p class="text-white  text-7xl font-bebas">OUR <span class="text-white/60"> MENU</span></p>
             </div>
             <div class="w-[50%] border-t-2 mt-54 py-10 border-white/20 right-0 absolute"></div>
         </div>
@@ -208,23 +236,187 @@
         <div id="beverageList"
             class=" bg-linear-to-b from-[#FFFFFF00] via-[#FFFFFF7A] to-[#FFFFFF00] justify-between items-center">
         </div>
-
         <div id="foodList" class="bg-black justify-between items-center">
         </div>
         <div id="dessertList" class=" bg-black justify-between items-center">
         </div>
+    </div>
+
+    <!-- Reviews -->
+
+    <div class="w-full  bg-black py-26" id="reviews">
+        <div class=" flex justify-center mb-12">
+            <div class="w-[50%] border-t-2 mt-12 py-10 border-white/20 left-0 absolute"></div>
+            <div class="text-center mt-24">
+                <p class="text-action text-md uppercase">REVIEWS</p>
+                <p class="text-white  text-7xl font-bebas">OUR CUSTOMERS<span class="text-white/60"> LOVES US</span></p>
+            </div>
+            <div class="w-[50%] border-t-2 mt-54 py-10 border-white/20 right-0 absolute"></div>
+        </div>
+        <div class="m-20 flex justify-center items-center">
+            <div class="relative w-full overflow-hidden">
+                <div id="carousel" class="flex gap-8 transition-transform duration-500 ease-in-out">
+                    <!-- Review 1 -->
+                    <div
+                        class="review-card w-[40%] relative flex-shrink-0 p-6 bg-[#1A1A1A]/40 text-white transition-all duration-500">
+                        <div class="text-9xl text-white/30 absolute left-6 top-6">“</div>
+                        <div class="justify-center items-center p-10 px-16">
+                            <h3 class="text-2xl font-normal">Exceptional Sushi and Service</h3>
+                            <p class="mt-2 font-[100] text-white/50">"Dining at Omakase was an unforgettable experience.
+                                The chefs' expertise shines through in each piece of sushi, from the delicate."</p>
+                            <div class="flex justify-between mt-8">
+                                <div class="text-action text-2xl">★★★★★</div>
+                                <p class="font-[100] text-white/50 text-right">— Emily R.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 (Centered Card) -->
+                    <div
+                        class="review-card w-[40%] relative flex-shrink-0 p-6 bg-[#1A1A1A] text-white transition-all duration-500 mx-auto">
+                        <div class="text-9xl text-white/30 absolute left-6 top-6">“</div>
+                        <div class="justify-center items-center p-10 px-16">
+                            <h3 class="text-2xl font-normal">A Truly Authentic Experience</h3>
+                            <p class="mt-2 font-[100] text-white/50">"Omakase exceeded all my expectations. The
+                                attention to detail in every dish was impeccable, and the flavors were simply
+                                outstanding."</p>
+                            <div class="flex justify-between mt-8">
+                                <div class="text-action text-2xl">★★★★★</div>
+                                <p class="font-[100] text-white/50 text-right">— Emily R.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div
+                        class="review-card w-[40%] flex-shrink-0 relative p-6 bg-[#1A1A1A]/40 text-white transition-all duration-500">
+                        <div class="text-9xl text-white/30 absolute left-6 top-6">“</div>
+                        <div class="justify-center items-center p-10 px-16">
+                            <h3 class="text-2xl font-normal">Exceptional Sushi and Service</h3>
+                            <p class="mt-2 font-[100] text-white/50">"Dining at Omakase was an unforgettable experience.
+                                The chefs' expertise shines through in each piece of sushi, from the delicate."</p>
+                            <div class="flex justify-between mt-8">
+                                <div class="text-action text-2xl">★★★★★</div>
+                                <p class="font-[100] text-white/50 text-right">— Emily R.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-
-        <script>
-
-
-        </script>
 
     </div>
+    <!-- Contact Us -->
+    <div class="bg-black" id="contacts">
+        <div class="bg-gradient-to-b from-[#00000000] via-[#FFFFFF92] to-[#00000000] ">
+            <div class=" flex justify-center mb-24">
+                <div class="w-[50%] border-t-2 mt-12 py-10 border-white/20 left-0 absolute"></div>
+                <div class="text-center mt-24">
+                    <p class="text-action text-md uppercase">CONTACT US</p>
+                    <p class="text-white  text-7xl font-bebas">RESERVE NOW</span>
+                    </p>
+                </div>
+                <div class="w-[50%] border-t-2 mt-54 py-10 border-white/20 right-0 absolute"></div>
+            </div>
+            <form id="contactForm">
+                <div class="flex h-full justify-center p-20 z-50 ">
+
+                    <div class="bg-[#1A1A1A] w-[50%]  p-20 justify-center items-center">
+                        <h2 class="text-4xl mb-26">Contact Us</h2>
+
+                        <div class="mb-6">
+                            <label class="block text-md">Phone</label>
+                            <input type="text" id="contactPhone" placeholder="+23 344 342"
+                                class="w-full pb-8 font-[200] border-b-1 border-white/20 mb-6">
+                            <p class="text-red-500 text-sm hidden" id="contactPhoneError">Phone number is required</p>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block">Email</label>
+                            <input type="email" id="contactEmail" placeholder="sushisusantee@mail.com"
+                                class="w-full pb-8 font-[200] border-b-1 border-white/20 mb-6">
+                            <p class="text-red-500 text-sm hidden" id="contactEmailError">Valid email is required</p>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block">Address</label>
+                            <input type="text" id="contactAddress"
+                                placeholder="44 Blue spring arizona, Djogjakarta, VA 234145"
+                                class="w-full pb-8 font-[200] border-b-1 border-white/20 mb-6">
+                            <p class="text-red-500 text-sm hidden" id="contactAddressError">Address is required</p>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block">Opening Hours</label>
+                            <input type="text" id="openingHours" placeholder="Sunday - Saturday 10am - 10pm"
+                                class="w-full pb-8 font-[200] border-b-1 border-white/20 mb-6">
+                            <p class="text-red-500 text-sm hidden" id="openingHoursError">Opening Hours is required</p>
+                        </div>
+
+
+                    </div>
+                    <div class="bg-[#000000] w-[50%]  p-20 justify-center items-center">
+                        <h2 class="text-4xl mb-16">Reserve Now</h2>
+
+                        <div>
+                            <label class="block">First Name</label>
+                            <input type="text" id="firstName" placeholder="Clark"
+                                class="w-full pb-8 font-[200] border-b-1 border-white/20 mb-6">
+                            <p class="text-red-500 text-sm hidden" id="firstNameError">First name is required</p>
+                        </div>
+
+                        <div>
+                            <label class="block">Last Name</label>
+                            <input type="text" id="lastName" placeholder="Kent"
+                                class="w-full pb-8 font-[200] border-b-1 border-white/20 mb-6">
+                            <p class="text-red-500 text-sm hidden" id="lastNameError">Last name is required</p>
+                        </div>
+
+                        <div>
+                            <label class="block">Date and Time</label>
+                            <input type="datetime-local" id="dateTime" placeholder="2024-07-12T14:00"
+                                class="w-full pb-8 font-[200] border-b-1 border-white/20 mb-6"
+                                aria-placeholder="2024-07-12T14:00">
+                            <p class="text-red-500 text-sm hidden" id="dateTimeError">Date and time are required</p>
+                        </div>
+
+                        <div>
+                            <label class="block">Notes</label>
+                            <textarea id="notes" aria-placeholder="Enter your messages here" rows="4"
+                                class="w-full pb-8 font-[200] border-b-1 border-white/20 mb-6 resize-none"
+                                placeholder="Enter your messages here"></textarea>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <button type="submit" class="bg-white text-black p-2 px-8 mt-4">NEXT</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="bg-[#1a1a1a] py-10 px-10 pr-20 flex justify-between">
+        <div class="flex items-center space-x-10">
+            <a href="javascript:void(0)" onclick="scrollToSection('about')">
+                <img src="./assets/logo_sushi.svg" alt="Sushi Japanese Resrtaurant Logo" class="w-48 h-12">
+            </a>
+            <a href="javascript:void(0)" onclick="scrollToSection('about')" class="text-white font-light">ABOUT</a>
+            <a href="javascript:void(0)" onclick="scrollToSection('menu')" class="text-white font-light">MENU</a>
+            <a href="javascript:void(0)" onclick="scrollToSection('contacts')" class="text-white font-light">CONTACT</a>
+        </div>
+        <div class="flex items-center space-x-6">
+            <p class="text-white font-light">+23 344 434</p>
+            <a href="#" class="bg-[#FFFFFF1A] px-6 py-2  text-white font-normal">BOOK A TABLE</a>
+        </div>
+    </footer>
 
 
 </body>
+<script src=" ./carousel.js"></script>
 <script src=" ./script.js">
 </script>
 

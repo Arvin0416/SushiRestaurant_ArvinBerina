@@ -21,3 +21,8 @@
     line-height: 1.2;
     max-height: 2.4em;
 }
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}

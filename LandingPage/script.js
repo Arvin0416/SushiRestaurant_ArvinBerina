@@ -3,6 +3,19 @@ function scrollToSection(sectionId) {
         behavior: 'smooth'
     });
 };
+const menuBtn = document.getElementById('menu-btn');
+const dropdownMenu = document.getElementById('dropdown-menu');
+
+menuBtn.addEventListener('click', function (event) {
+    dropdownMenu.classList.toggle('hidden');
+    event.stopPropagation();
+});
+
+document.addEventListener('click', function (event) {
+    if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.add('hidden');
+    }
+});
 
 const menuData = [
     {
@@ -369,3 +382,39 @@ style=" height: 100%; backdrop-filter: blur(10px); background-color: #1A1A1A;">
 </div>
 </div>
 `;
+
+
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let isValid = true;
+    const fields = [
+        { id: "contactPhone", errorId: "contactPhoneError" },
+        { id: "contactEmail", errorId: "contactEmailError", validation: (value) => value.includes("@") },
+        { id: "contactAddress", errorId: "contactAddressError" },
+        { id: "openingHours", errorId: "openingHoursError" },
+        { id: "firstName", errorId: "firstNameError" },
+        { id: "lastName", errorId: "lastNameError" },
+        { id: "dateTime", errorId: "dateTimeError" }
+    ];
+
+    fields.forEach(field => {
+        const input = document.getElementById(field.id);
+        const errorElement = document.getElementById(field.errorId);
+        errorElement.classList.add("hidden");
+
+        if (!input.value || (field.validation && !field.validation(input.value))) {
+            errorElement.classList.remove("hidden");
+            isValid = false;
+        }
+    });
+
+    if (isValid) {
+        let fieldsInfo = '';
+        fields.forEach(field => {
+            const input = document.getElementById(field.id);
+            fieldsInfo += `${field.id}: ${input.value}\n`;
+        });
+        alert(`Form submitted successfully!\n${fieldsInfo}`);
+    }
+});
