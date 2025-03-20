@@ -86,7 +86,7 @@ function renderMenuGrid(data) {
     const grid = document.getElementById('menu-grid');
     grid.innerHTML = data.map(menu => `
         <div class="flex flex-col items-center p-1 ">
-            <div class="bg-black w-full p-8">
+            <div class="w-full p-8 bg-radial from-[#F5F5F5] from-0% to-[#000000FF] to-80%">
                 <div class=" bg-white/20 rounded-4xl">
                     <img src="${menu.imageUrl}" alt="${menu.title}" class="w-full h-32 object-cover rounded-4xl mb-2">
                 </div>
