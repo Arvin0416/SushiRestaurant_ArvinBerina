@@ -157,15 +157,15 @@ const secondBeverageColumn = beverageData.slice(5);
 const beverageList = document.getElementById('beverageList');
 beverageList.innerHTML = `
     <div class="flex h-full justify-center p-20">
-        <div class="bg-white w-[35%] my-40 "></div>
-        <div class="bg-[#1A1A1A] w-[65%] "
+        <div class=" bg-white  w-[10%] md:w-[35%] lg:w-[35%] my-40 "></div>
+        <div class="bg-[#1A1A1A] w-full md:w-[65%] lg:w-[65%]" "
             style=" height: 100%; backdrop-filter: blur(10px); background-color: #1A1A1A;">
-            <div class="p-10">
+            <div class="p-5 md:p-10">
                 <div class=" border-t-2 border-l-2 border-r-2 border-white/20 h-full flex items-end p-4 z-50">
                     <div class="menu_gradient top-0 left-0  absolute w-full h-full"> </div>
                     <div class="w-full h-full left-0 top-0 relative p-10">
-                        <p class="font-bebas text-white text-5xl mt-[-40px] p-4">Beverage</p>
-                         <div class="grid grid-cols-2 gap-4 p-4">
+                        <p class="font-bebas text-white text-5xl mt-[-40px] md:p-4">Beverage</p>
+                         <div class="grid md:grid-cols-2 gap-4 p-0 md:p-4">
                         <div class="flex flex-col gap-4">
                             ${firstBeverageColumn.map(beverageItem => `
                                 <div>
@@ -246,13 +246,13 @@ const secondFoodColumn = foodData.slice(5);
 const foodList = document.getElementById('foodList');
 foodList.innerHTML = `
 <div class="flex h-full justify-center p-20">
-    <div class="bg-[#1A1A1A] w-[65%]" style="height: 100%; backdrop-filter: blur(10px); background-color: #1A1A1A;">
-        <div class="p-10">
+    <div class="bg-[#1A1A1A] w-full md:w-[35%] lg:w-[65%]" style="height: 100%; backdrop-filter: blur(10px); background-color: #1A1A1A;">
+        <div class="p-5 md:p-10">
             <div class="border-t-2 border-l-2 border-r-2 border-white/20 h-full flex items-end p-4 z-50">
                 <div class="menu_gradient top-0 left-0 absolute w-full h-full"></div>
                 <div class="w-full h-full left-0 top-0 relative p-10">
                     <p class="font-bebas text-white text-5xl mt-[-40px] p-4">Food</p>
-                    <div class="grid grid-cols-2 gap-4 p-4">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-4 p-4">
                         <div class="flex flex-col gap-4">
                             ${firstFoodColumn.map(foodItem => `
                                 <div>
@@ -284,7 +284,7 @@ foodList.innerHTML = `
             </div>
         </div>
     </div>
-    <div class="bg-white w-[35%] my-40"></div>
+    <div class="bg-white w-[10%] md:w-[35%] lg:w-[35%] my-40"></div>
 </div>
 `;
 
@@ -341,15 +341,15 @@ const secondDessertColumn = dessertData.slice(5);
 const dessertList = document.getElementById('dessertList');
 dessertList.innerHTML = `
 <div class="flex h-full justify-center p-20">
-<div class="bg-white w-[35%] my-40 "></div>
-<div class="bg-[#1A1A1A] w-[65%] "
+<div class="bg-white w-[10%]  md:w-[35%] my-40 "></div>
+<div class="bg-[#1A1A1A] w-full md:w-[65%] "
 style=" height: 100%; backdrop-filter: blur(10px); background-color: #1A1A1A;">
-<div class="p-10">
+<div class="p-5 md:p-10">
     <div class=" border-t-2 border-l-2 border-r-2 border-white/20 h-full flex items-end p-4 z-50">
         <div class="menu_gradient top-0 left-0  absolute w-full h-full"> </div>
         <div class="w-full h-full left-0 top-0 relative p-10">
             <p class="font-bebas text-white text-5xl mt-[-40px] p-4">Dessert</p>
-             <div class="grid grid-cols-2 gap-4 p-4">
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
             <div class="flex flex-col gap-4">
                 ${firstDessertColumn.map(dessertItem => `
                     <div>
